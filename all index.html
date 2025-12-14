@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MattSue 的遊戲傳送門</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .game-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .icon-wrapper {
+            transition: transform 0.3s ease;
+        }
+
+        .game-card:hover .icon-wrapper {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center p-4 sm:p-8">
+
+    <div class="w-full max-w-md space-y-8">
+        <!-- 標題區域 -->
+        <div class="text-center text-white mb-8 animate-fade-in-down">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-2 tracking-wide">🎮 遊戲傳送門</h1>
+            <p class="text-blue-100 text-lg">選擇一個遊戲開始遊玩吧！</p>
+        </div>
+
+        <!-- 連結列表 -->
+        <div class="space-y-4">
+            
+            <!-- 多寶遊戲 -->
+            <a href="https://mattsue.my.canva.site/dobble" target="_blank" rel="noopener noreferrer" class="game-card block bg-white rounded-2xl p-6 shadow-lg hover:bg-blue-50 border-2 border-transparent hover:border-blue-200 group relative overflow-hidden">
+                <div class="absolute right-0 top-0 h-24 w-24 bg-blue-100 rounded-full -mr-12 -mt-12 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="flex items-center space-x-4 relative z-10">
+                    <div class="icon-wrapper bg-blue-500 text-white p-4 rounded-xl shadow-md group-hover:bg-blue-600">
+                        <i data-lucide="shapes" class="w-8 h-8"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl font-bold text-gray-800 group-hover:text-blue-700">多寶遊戲</h2>
+                        <p class="text-gray-500 text-sm mt-1">Dobble Game</p>
+                    </div>
+                    <div class="text-gray-300 group-hover:text-blue-500 transition-colors">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 反應力遊戲 -->
+            <a href="https://mattsue1003.github.io/lightgame/" target="_blank" rel="noopener noreferrer" class="game-card block bg-white rounded-2xl p-6 shadow-lg hover:bg-yellow-50 border-2 border-transparent hover:border-yellow-200 group relative overflow-hidden">
+                <div class="absolute right-0 top-0 h-24 w-24 bg-yellow-100 rounded-full -mr-12 -mt-12 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="flex items-center space-x-4 relative z-10">
+                    <div class="icon-wrapper bg-yellow-500 text-white p-4 rounded-xl shadow-md group-hover:bg-yellow-600">
+                        <i data-lucide="zap" class="w-8 h-8"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl font-bold text-gray-800 group-hover:text-yellow-700">反應力遊戲</h2>
+                        <p class="text-gray-500 text-sm mt-1">Light Game</p>
+                    </div>
+                    <div class="text-gray-300 group-hover:text-yellow-500 transition-colors">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 箭頭遊戲 -->
+            <a href="https://mattsue1003.github.io/arrow/" target="_blank" rel="noopener noreferrer" class="game-card block bg-white rounded-2xl p-6 shadow-lg hover:bg-green-50 border-2 border-transparent hover:border-green-200 group relative overflow-hidden">
+                <div class="absolute right-0 top-0 h-24 w-24 bg-green-100 rounded-full -mr-12 -mt-12 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="flex items-center space-x-4 relative z-10">
+                    <div class="icon-wrapper bg-green-500 text-white p-4 rounded-xl shadow-md group-hover:bg-green-600">
+                        <i data-lucide="move" class="w-8 h-8"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl font-bold text-gray-800 group-hover:text-green-700">箭頭遊戲</h2>
+                        <p class="text-gray-500 text-sm mt-1">Arrow Game</p>
+                    </div>
+                    <div class="text-gray-300 group-hover:text-green-500 transition-colors">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- 頁尾 -->
+        <div class="mt-12 text-center text-blue-200 text-sm">
+            <p>© 2025 MattSue Games</p>
+        </div>
+    </div>
+
+    <script>
+        // 初始化 Lucide 圖標
+        lucide.createIcons();
+    </script>
+</body>
+</html>
